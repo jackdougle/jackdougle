@@ -1,5 +1,5 @@
 {
-  "name": "saigem-site",
+  "name": "jgsite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
+    "d3": "^7.9.0",
     "framer-motion": "^12.18.1",
     "motion": "^12.18.1",
     "react": "^19.1.0",

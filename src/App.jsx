@@ -2,43 +2,24 @@ import { Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 import ScrollToTop from "./ScrollToTop.jsx"
 
-import NavBar from "./Navbar.jsx"
-import News from "./pages/News.jsx"
+import Navbar from "./components/Navbar.jsx"
 import Home from "./pages/Home.jsx"
-import About from "./pages/About.jsx"
-import Projects from "./pages/Projects.jsx"
-import Contact from "./pages/Contact.jsx"
-import Placeholder from "./pages/Placeholder.jsx"
 
 function App() {
     const location = useLocation()
 
     return (
-    <div className="relative min-h-screen min-w-screen max-w-screen overflow-hidden">
-      <ScrollToTop />
-      <NavBar />
-      <div className=" overflow-y-scroll bg-white w-full md:pl-[320px]">
-        <News />
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-
-            <Route path="projects">
-              <Route index element={<Projects />} />
-              <Route path="molecular-thesaurus" element={<Placeholder />} />
-              <Route path="nucleaze" element={<Placeholder />} />
-              <Route path="igem-2026" element={<Placeholder />} />
-            </Route>
-
-            <Route path="igem" element={<Placeholder />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="forum" element={<Placeholder />} />
-            <Route path="journal" element={<Placeholder />} />
-          </Routes>
-        </AnimatePresence>
-      </div>
-    </div>
+        <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <Navbar />
+            <div className="w-full max-w-3xl mx-auto px-4 pt-32 pb-10">
+                <ScrollToTop />
+                <AnimatePresence mode="wait">
+                    <Routes location={location} key={location.pathname}>
+                        <Route index element={<Home />} />
+                    </Routes>
+                </AnimatePresence>
+            </div>
+        </div>
     );
 }
 

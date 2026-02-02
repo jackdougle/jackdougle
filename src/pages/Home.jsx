@@ -1,40 +1,29 @@
 import AnimWrapper from "../Transition";
-import { Link } from "react-router";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
+import FloatingOrbs from "../components/FloatingOrbs"; // Import the new component
 
 function Home() {
-    return(
+    return (
         <AnimWrapper>
-          <div className="flex flex-col font-mono bg-gradient-to-r from-purple-400 to-green-400 bg-clip-text text-transparent font-extrabold mx-6 my-2">
-            <p className="text-[40px] sm:text-[70px] bg-gradient-to-r from-blue-400 to-red-500 bg-clip-text text-transparent -mt-2">The SynBio Society @ UA</p>
-            <p className="text-gray-800 text-2xl translate-x-1">The new home of iGEM and other emerging biology endeavors at UA</p>
-          </div>
-          <div className="relative w-full h-[700px] mt-8 mb-10 xs:hidden">
-            <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
-            <img src="/mole.jpg" className="w-full h-[700px] object-cover" alt="Cell Placeholder Image" />
-            <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent"></div>
-          </div>
-          <div className="font-sans flex flex-col justify-center text-[21px] px-8 mr-6">
-            <div className="flex flex-col m-4 font-light">
-              <p className="text-2xl font-bold font-mono mb-2">What do we do?</p>
-              <p>The UA SynBio Society is a new UA club focused on synthetic biology and getting interested students involved. We are a group of undergraduate students from various majors who are passionate about synthetic biology and its potential to solve real-world problems. Our primary way of creating impact is through facilitating the construction of teams to compete in international synthetic biology competitions, primarily <strong>iGEM</strong>. Our teams will be comprised of students dedicated to creating innovative solutions that can make a positive impact on society.</p>
-              <p className="mt-2">We work on projects that involve designing and building biological systems using synthetic biology techniques. Our goal is to contribute to the field of synthetic biology and to inspire others to explore its possibilities.</p>
-              <Link to="/projects" className="font-mono font-bold mt-2 text-lg text-sky-500 hover:text-sky-300 transition duration-300">Our work &rarr;</Link>
+            <FloatingOrbs />
+            <div className="font-sans flex flex-col justify-center text-[21px] px-8 mr-6 relative z-10">
+                <div className="flex flex-col m-4 font-light">
+                    <p className="text-2xl font-bold font-mono mb-2">Who?</p>
+                    <p>Hi! I'm an aspiring biosecurity researcher, iGEMer, and world-helper. I grew up in Tucson, Arizona, where I'm also an undergraduate.</p>
+                    <p className="mt-2">Aside from that, I love open-world games, vegan food, anime, and all things biosecurity and biotech.</p>
+                </div>
+                <div className="flex flex-col m-4 font-light">
+                    <p className="text-2xl font-bold font-mono mb-2">What?</p>
+                    <p>As part of the ERA AI Biosecurity Fellowhsip, I'm currently researching Anthrax and Salmonella in Cambridge, UK. Back home in AZ, I design molecular TB tests at Strive Bioscience, a Gates Foundation-backed startup.</p>
+                    <p className="mt-2">I also recently completed development of <Link to="https://github.com/jackdougle/nucleaze" className="font-mono font-bold text-[21px] text-sky-500 hover:text-sky-400 transition duration-300"> Nucleaze</Link>, a sequence decontamination program now streamlining the Nucleic Acid Observatory's biosurvaillance program. Finally, I'm leading <Link to="https://uaigem.org/" className="font-mono font-semibold text-[21px] text-sky-500 hover:text-sky-400 transition duration-300"> UA iGEM</Link>, a new synbio team focused on organoid research.</p>
+                </div>
+                <div className="flex flex-col m-4 font-light">
+                    <p className="text-2xl font-bold font-mono mb-2">Why?</p>
+                    <p>Humans (and most animals, likely) can experience things. You can experience things. You know what different stimuli feel like. We can safely assume that other humans (and conscious agents more broadly) have analoguous reponses to similar stimuli. Because of this, other conscious agents will suffer in ways you would suffer when exposed to negative stimuli.</p>
+                    <p>Now, I ask you to take a leap of faith, to start caring about the experience of another like it's your own. We are born into situations outside of our control. These situations determine who we're close to, and give us easy candidates for people to love (i.e. the family and friends present in your geographic area).</p>
+                    <p className="mt-2"></p>
+                </div>
             </div>
-            <div className="flex flex-col m-4 font-light">
-              <p className="text-2xl font-bold font-mono mb-2">What is iGEM?</p>
-              <p>The iGEM (International Genetically Engineered Machine) competition is a prestigious global synthetic biology contest that challenges students to design and build biological systems using standard, interchangeable parts called BioBricks. Teams from around the world work on innovative projects that address real-world issues, ranging from environmental sustainability to healthcare.</p>
-              <p className="mt-2">The iGEM competition provides a platform for students to collaborate, learn, and showcase their skills in synthetic biology. It fosters creativity, critical thinking, and teamwork, allowing participants to contribute to the advancement of synthetic biology and its applications.</p>
-              <Link to="https://competition.igem.org/" className="font-mono font-bold mt-2 text-lg text-sky-500 hover:text-sky-300 transition duration-300">iGEM's Website &rarr;</Link>
-            </div>
-            <div className="flex flex-col m-4 font-light">
-              <p className="text-2xl font-bold font-mono mb-2">How can you help?</p>
-              <p>We are always looking for support and mentorship from the community. If you are interested in helping us with our projects, please reach out to us and apply. If you're not interested in fully joining the team but would like to get involved in a smaller capacity, we'd love to get an email from you!</p>
-              <HashLink smooth to="/contact#apply" className="font-mono font-bold mt-2 text-lg text text-sky-500 hover:text-sky-300 transition duration-300">Apply &rarr;</HashLink>
-              <p className="mt-2">Additionally, if you would like to support our team financially, we accept donations to help cover the costs of materials, equipment, and travel for the competition.</p>
-              <HashLink smooth to="/contact#donate" className="font-mono font-bold mt-2 text-lg text text-sky-500 hover:text-sky-300 transition duration-300 mb-4">Donate &rarr;</HashLink>
-            </div>
-          </div>
         </AnimWrapper>
     )
 }
