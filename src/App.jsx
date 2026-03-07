@@ -4,18 +4,22 @@ import ScrollToTop from "./ScrollToTop.jsx"
 
 import Navbar from "./components/Navbar.jsx"
 import Home from "./pages/Home.jsx"
+import Blog from "./pages/Blog.jsx"
+import NucleazeIntro from "./pages/doings/NucleazeIntro.jsx"
 
 function App() {
     const location = useLocation()
 
     return (
-        <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="relative min-h-screen flex flex-col overflow-x-hidden bg-white dark:bg-black text-gray-900 dark:text-white">
             <Navbar />
-            <div className="w-full max-w-3xl mx-auto px-4 pt-32 pb-10">
+            <div className="w-full pt-32">
                 <ScrollToTop />
                 <AnimatePresence mode="wait">
                     <Routes location={location} key={location.pathname}>
-                        <Route index element={<Home />} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/blog" element={<Blog />} />
+                        <Route path="/doings/nucleaze-intro" element={<NucleazeIntro />} />
                     </Routes>
                 </AnimatePresence>
             </div>
