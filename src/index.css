@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+  zoom: 0.9;
+}
+
 html.dark {
   color-scheme: dark;
 }

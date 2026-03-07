@@ -2,7 +2,7 @@
 
 Hi! I want to alleviate the burden of infectious diseases, prevent the next future pandemic, and see the ending of One Piece. I'm also a big fan of video games (souls-likes, rouge-likes especially), thinking I'm knowledgable about philosophy, and playing ping pong!
 
-Check out many of my thoughts [here](https://jgdouglass.net/blog) and my CV [here](https://jgdouglass.net/cv).
+Check out many of my thoughts [here](https://jgdouglass.net/blog) and my CV [here](https://drive.google.com/file/d/1PGkj8hirzJQR_tL8muBLxavG70eBoCBu/view).
 
 ![](/me/me2.jpg)
 
