@@ -6,6 +6,7 @@ function NucleazeIntro() {
     return (
         <AnimWrapper>
             <PageLayout
+                rightImage="/manga/clocktower.png"
                 imageClass="dark:invert"
                 content={content}
             />
