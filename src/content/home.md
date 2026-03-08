@@ -1,6 +1,6 @@
 ### Who?
 
-Hi! I want to help alleviating the burden of infectious diseases, prevent the next pandemic, and see the ending of One Piece. I'm also a big fan of video games (souls-likes, rouge-likes especially), debating my poorly-researched philosophy takes, and karaoke!
+Hi! I want to help alleviate the burden of infectious diseases, prevent the next pandemic, and see the ending of One Piece. I'm also a big fan of video games (souls-likes, rouge-likes especially), debating my poorly-researched philosophy takes, and karaoke!
 
 Check out some of my thoughts [here](https://jgdouglass.net/blog) and my CV [here](https://drive.google.com/file/d/1PGkj8hirzJQR_tL8muBLxavG70eBoCBu/view).
 
