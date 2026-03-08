@@ -2,7 +2,7 @@
 
 Hi! I want to alleviate the burden of infectious diseases, prevent the next pandemic, and see the ending of One Piece. I'm also a big fan of story-heavy games, debating my poorly-researched philosophy takes, vegan food, karaoke, and programming!
 
-Check out some of my thoughts [here](https://jgdouglass.net/blog) and my CV [here](https://drive.google.com/file/d/1PGkj8hirzJQR_tL8muBLxavG70eBoCBu/view).
+Check out some of my thoughts [here](https://jgdouglass.net/blog) and my CV [here](https://drive.google.com/file/d/1UhlE3_URxiM0grz4DeHFQM4hgsXPT6pw/view?usp=sharing).
 
 ![](/me/me2.jpg)
 
