@@ -51,7 +51,7 @@ function Navbar() {
             Blog
           </Link>
           <Link
-            to="https://drive.google.com/file/d/1PGkj8hirzJQR_tL8muBLxavG70eBoCBu/view?usp=sharing"
+            to="https://drive.google.com/file/d/1rHn1Dd2BWEaQcofoFd5Bvp4veo65qjty/view?usp=sharing"
             className="font-mono text-2xl text-gray-800 dark:text-gray-200 hover:scale-108 transition"
           >
             CV
