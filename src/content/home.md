@@ -1,8 +1,9 @@
 ### Who?
 
-Hi! I want to alleviate the burden of infectious diseases, prevent the next pandemic, and see the ending of One Piece. I'm also a big fan of story-heavy games, debating my poorly-researched philosophy takes, vegan food, karaoke, and programming.
+Hi, I'm Jack. I want to help create a world where no one has to die from preventable disease. I'm a technical researcher interested in biohardening, diagnostics, synthesis screening, and biological foundation models.
 
-Check out some of my thoughts [here](https://jgdouglass.net/blog) and my CV [here](https://drive.google.com/file/d/1UhlE3_URxiM0grz4DeHFQM4hgsXPT6pw/view?usp=sharing).
+I'm also a big fan of story-heavy games, debating my poorly-researched philosophy takes, vegan food, karaoke, and programming.
+
 
 ![](/me/me2.jpg)
 
@@ -10,7 +11,7 @@ Check out some of my thoughts [here](https://jgdouglass.net/blog) and my CV [her
 
 I'm currently finishing my bachelor's in biology at the University of Arizona, researching sequences of concern as an [ERA AIxBio Fellow](https://aixbiosecurity.com), and designing new diagnostics at Strive Bioscience, a Gates Foundation-backed startup. I also help lead [UA iGEM](https://uaigem.org) and am involved with Tucson Effective Altruism.
 
-Recently, I developed [nucleaze](https://github.com/jackdougle/nucleaze) for the [Nucleic Acid Observatory](https://naobservatory.org). If you like Rust and performance optimization, consider [contributing](https://jackdouglass.info/doings/nucleaze-intro).
+Recently, I developed [nucleaze](https://github.com/jackdougle/nucleaze) for the Nucleic Acid Observatory. If you like Rust and performance optimization, consider [contributing](../blog/nucleaze-intro).
 
 ### Why?
 

@@ -80,7 +80,7 @@ function PageLayout({ leftImage, rightImage, content, imageClass = "" }) {
     a: ({ href, children }) => (
       <a
         href={href}
-        className="text-sky-500 dark:text-sky-400 hover:text-sky-400 dark:hover:text-sky-300 transition duration-300"
+        className="text-sky-600 dark:text-sky-300 hover:text-sky-800 dark:hover:text-sky-200 transition duration-300"
         target="_blank"
         rel="noreferrer"
       >

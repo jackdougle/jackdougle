@@ -1,6 +1,6 @@
 import AnimWrapper from "../../Transition";
 import PageLayout from "../../components/PageLayout";
-import content from "../../content/doings/nucleaze_intro.md?raw";
+import content from "../../content/blog/nucleaze_intro.md?raw";
 
 function NucleazeIntro() {
     return (

@@ -5,7 +5,7 @@ import ScrollToTop from "./ScrollToTop.jsx"
 import Navbar from "./components/Navbar.jsx"
 import Home from "./pages/Home.jsx"
 import Blog from "./pages/Blog.jsx"
-import NucleazeIntro from "./pages/doings/NucleazeIntro.jsx"
+import NucleazeIntro from "./pages/blog/NucleazeIntro.jsx"
 
 function App() {
     const location = useLocation()
@@ -19,7 +19,7 @@ function App() {
                     <Routes location={location} key={location.pathname}>
                         <Route path="/" element={<Home />} />
                         <Route path="/blog" element={<Blog />} />
-                        <Route path="/doings/nucleaze-intro" element={<NucleazeIntro />} />
+                        <Route path="/blog/nucleaze-intro" element={<NucleazeIntro />} />
                     </Routes>
                 </AnimatePresence>
             </div>

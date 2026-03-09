@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import AnimWrapper from "../Transition";
 
-const doings = [
-    { path: "/doings/nucleaze-intro", title: "03.01.2026 - Nucleaze: Sequence Filtration in Rust" },
+const bioinformatics = [
+    { path: "/blog/nucleaze-intro", title: "03.01.2026 - Nucleaze: Sequence Filtration in Rust" },
 ];
 
 function Section({ title, links }) {
@@ -33,7 +33,7 @@ function Blog() {
     return (
         <AnimWrapper>
             <div className="max-w-2xl mx-auto px-8 pb-10 font-mono text-gray-900 dark:text-gray-100">
-                <Section title="Bioinformatics" links={doings} />
+                <Section title="Bioinformatics" links={bioinformatics} />
             </div>
         </AnimWrapper>
     );
