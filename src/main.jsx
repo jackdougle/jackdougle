@@ -4,10 +4,11 @@ import './index.css'
 
 import App from "./App.jsx"
 
-if (localStorage.getItem('theme') === 'dark') {
-  document.documentElement.classList.add('dark')
-} else {
+// Set dark mode as default unless theme is explicitly set to 'light'
+if (localStorage.getItem('theme') === 'light') {
   document.documentElement.classList.remove('dark')
+} else {
+  document.documentElement.classList.add('dark')
 }
 
 createRoot(document.getElementById('root')).render(
