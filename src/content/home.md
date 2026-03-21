@@ -11,7 +11,7 @@ I'm also a big fan of story-heavy games, debating my poorly-researched philosoph
 
 I'm currently finishing my bachelor's in biology at the University of Arizona, researching sequences of concern as an [ERA AIxBio Fellow](https://aixbiosecurity.com), and designing new diagnostics at Strive Bioscience, a Gates Foundation-backed startup. I also help lead [UA iGEM](https://uaigem.org) and am involved with Tucson Effective Altruism.
 
-Recently, I developed [nucleaze](https://github.com/jackdougle/nucleaze) for the Nucleic Acid Observatory. If you like Rust and performance optimization, consider [contributing](../blog/nucleaze-intro).
+Recently, I developed [nucleaze](https://github.com/jackdougle/nucleaze) for the Nucleic Acid Observatory. If you like Rust and performance optimization, consider [contributing](https://users.rust-lang.org/t/introducing-nucleaze-fast-multi-threaded-k-mer-sequence-filtration/138630).
 
 ### Why?
 

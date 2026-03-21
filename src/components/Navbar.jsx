@@ -45,7 +45,7 @@ function Navbar() {
         </div>
         <div className="flex space-x-8">
           <Link
-            to="/blog"
+            to="https://jackdouglass.substack.com/"
             className="font-mono text-2xl text-gray-800 dark:text-gray-200 hover:scale-105 transition"
           >
             Blog

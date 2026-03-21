@@ -5,7 +5,6 @@ import ScrollToTop from "./ScrollToTop.jsx"
 import Navbar from "./components/Navbar.jsx"
 import Home from "./pages/Home.jsx"
 import Blog from "./pages/Blog.jsx"
-import NucleazeIntro from "./pages/blog/NucleazeIntro.jsx"
 
 function App() {
     const location = useLocation()
@@ -18,8 +17,6 @@ function App() {
                 <AnimatePresence mode="wait">
                     <Routes location={location} key={location.pathname}>
                         <Route path="/" element={<Home />} />
-                        <Route path="/blog" element={<Blog />} />
-                        <Route path="/blog/nucleaze-intro" element={<NucleazeIntro />} />
                     </Routes>
                 </AnimatePresence>
             </div>
