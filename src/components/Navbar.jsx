@@ -51,7 +51,7 @@ function Navbar() {
             Blog
           </Link>
           <Link
-            to="https://drive.google.com/file/d/1qck3u3z_bH5lyO7M0z1H6YfPvcFEWWvT/view?usp=sharing"
+            to="https://drive.google.com/file/d/1mjFt0DJeky_xzW6SXEdXoMN8A1bWIvQt/view?usp=sharing"
             className="font-mono text-2xl text-gray-800 dark:text-gray-200 hover:scale-108 transition"
           >
             Resume
