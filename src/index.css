@@ -3,8 +3,13 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html, body, #root {
+  min-height: 100dvh;
+  margin: 0;
+}
+
 html {
-  zoom: 0.8;
+  zoom: 0.81;
 }
 
 html.dark {

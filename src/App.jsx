@@ -10,9 +10,9 @@ function App() {
     const location = useLocation()
 
     return (
-        <div className="relative min-h-screen flex flex-col overflow-x-hidden bg-white dark:bg-black text-gray-900 dark:text-white">
+        <div className="relative min-h-[calc(100dvh)] flex flex-col overflow-x-hidden bg-white dark:bg-black text-gray-900 dark:text-white">
             <Navbar />
-            <div className="w-full pt-32 flex-1 flex flex-col">
+            <div className="w-full pt-30 flex-1 flex flex-col">
                 <ScrollToTop />
                 <AnimatePresence mode="wait">
                     <Routes location={location} key={location.pathname}>

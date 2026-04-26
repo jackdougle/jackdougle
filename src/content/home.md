@@ -17,4 +17,4 @@ Recently, I developed [nucleaze](https://github.com/jackdougle/nucleaze) for the
 
 We're probably at the confluence of multiple [Hinges of History](https://www.cold-takes.com/most-important-century/). The world is defined by suffering. We can change that. Why not try?
 
-_Feel free to message me at **jack.gdouglass [at] gmail [dot] com**_!
+_Feel free to message me at **jack.gdouglass [at] gmail [dot] com** and please give me feedback [here](https://www.admonymous.co/jackdouglass)_!

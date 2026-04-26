@@ -98,7 +98,7 @@ function PageLayout({ leftImage, rightImage, content, imageClass = "" }) {
   );
 
   return (
-    <div className="flex-1 flex w-full" style={{ minHeight: 'calc(100vh)' }}>
+    <div className="flex-1 flex w-full">
       {/* Left column */}
       <div className="flex-1 relative">
         {leftImage && imgEl(leftImage, "left")}
