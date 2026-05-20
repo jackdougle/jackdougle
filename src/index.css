@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
+@theme {
+  /* Shared rail art height (Luffy / Haise). Use via `h-manga-rail`. */
+  --height-manga-rail: 400px;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 html, body, #root {
@@ -8,8 +13,11 @@ html, body, #root {
   margin: 0;
 }
 
-html {
-  zoom: 0.81;
+/* Shrinks desktop layout globally; disabling on small viewports avoids odd mobile sizing. */
+@media (min-width: 1024px) {
+  html {
+    zoom: 0.81;
+  }
 }
 
 html.dark {

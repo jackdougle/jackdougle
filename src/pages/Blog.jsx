@@ -8,7 +8,7 @@ const bioinformatics = [
 function Section({ title, links }) {
     return (
         <section className="mb-10">
-            <p className="font-mono font-bold text-2xl mb-4 text-gray-900 dark:text-white">{title}</p>
+            <p className="mb-4 font-mono text-[calc(1.5rem-2pt)] font-bold text-gray-900 dark:text-white">{title}</p>
             {links.length > 0 ? (
                 <ul className="space-y-2 translate-x-5">
                     {links.map(({ path, title }) => (

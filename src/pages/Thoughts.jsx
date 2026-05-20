@@ -1,19 +1,18 @@
 import AnimWrapper from "../Transition";
 import PageLayout from "../components/PageLayout";
-import { manga, me } from "../constants/publicAssets.js";
-import content from "../content/home.md?raw";
+import { manga } from "../constants/publicAssets.js";
+import content from "../content/tips.md?raw";
 
-function Home() {
+function Thoughts() {
     return (
         <AnimWrapper>
             <PageLayout
-                leftImage={manga.luffy}
+                rightImage={manga.haise}
                 imageClass="dark:invert"
                 content={content}
-                portraitLink={{ src: me.portrait, to: "/thoughts" }}
             />
         </AnimWrapper>
     );
 }
 
-export default Home;
+export default Thoughts;
