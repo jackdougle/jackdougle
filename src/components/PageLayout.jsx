@@ -51,18 +51,19 @@ function PageLayout({ leftImage, rightImage, content, imageClass = "", portraitL
     ),
     p: ({ children }) => <p className="font-light">{children}</p>,
     img: ({ src, alt }) => {
+      const isPortraitLink = portraitLink && src === portraitLink.src;
       const img = (
         <img
           src={src}
           alt={alt ?? ""}
-          className="mx-auto block w-full max-w-full rounded-2xl border-2 md:max-w-[90%] lg:max-w-[68%]"
+          className={`mx-auto block w-full max-w-full rounded-2xl border-2 md:max-w-[90%] lg:max-w-[68%] ${isPortraitLink ? "transition-[filter] duration-300 group-hover:grayscale" : ""}`}
         />
       );
-      if (portraitLink && src === portraitLink.src) {
+      if (isPortraitLink) {
         return (
           <Link
             to={portraitLink.to}
-            className="block rounded-2xl outline-none ring-sky-500/80 transition hover:opacity-95 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-black"
+            className="group block rounded-2xl outline-none ring-sky-500/80 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-black"
             aria-label="Open thoughts"
           >
             {img}
