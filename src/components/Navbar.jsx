@@ -95,7 +95,7 @@ function Navbar() {
             Blog
           </a>
           <a
-            href="https://drive.google.com/file/d/10zE5T1flDCqy25OFL3Rg5RRJc4EvIEc-/view?usp=sharing"
+            href="https://drive.google.com/file/d/11TD8z9Gb7ygT_kk1yxHfsFo1uom-vHcG/view?usp=sharing"
             className={`${externalLinkClass} whitespace-nowrap`}
             target="_blank"
             rel="noreferrer noopener"
@@ -150,7 +150,7 @@ function Navbar() {
                 Blog
               </a>
               <a
-                href="https://drive.google.com/file/d/10zE5T1flDCqy25OFL3Rg5RRJc4EvIEc-/view?usp=sharing"
+                href="https://drive.google.com/file/d/11TD8z9Gb7ygT_kk1yxHfsFo1uom-vHcG/view?usp=sharing"
                 className={`${externalLinkClass} whitespace-nowrap`}
                 target="_blank"
                 rel="noreferrer noopener"
