@@ -13,3 +13,5 @@ export const manga = {
 export const me = {
   portrait: publicUrl("me/me2.jpg"),
 };
+
+export const resume = publicUrl("resume.pdf");

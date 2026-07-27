@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Moon, Sun, X } from "lucide-react";
+import { resume } from "../constants/publicAssets";
 
 const externalLinkClass =
   "font-mono text-lg md:text-2xl text-gray-800 dark:text-gray-200 hover:scale-105 transition py-2 md:py-0";
@@ -95,7 +96,7 @@ function Navbar() {
             Blog
           </a>
           <a
-            href="https://drive.google.com/file/d/11TD8z9Gb7ygT_kk1yxHfsFo1uom-vHcG/view?usp=sharing"
+            href={resume}
             className={`${externalLinkClass} whitespace-nowrap`}
             target="_blank"
             rel="noreferrer noopener"
@@ -150,7 +151,7 @@ function Navbar() {
                 Blog
               </a>
               <a
-                href="https://drive.google.com/file/d/11TD8z9Gb7ygT_kk1yxHfsFo1uom-vHcG/view?usp=sharing"
+                href={resume}
                 className={`${externalLinkClass} whitespace-nowrap`}
                 target="_blank"
                 rel="noreferrer noopener"
