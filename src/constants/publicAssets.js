@@ -10,8 +10,4 @@ export const manga = {
   haise: publicUrl("manga/haise.png"),
 };
 
-export const me = {
-  portrait: publicUrl("me/me2.jpg"),
-};
-
 export const resume = publicUrl("resume.pdf");

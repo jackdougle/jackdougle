@@ -1,6 +1,6 @@
 import AnimWrapper from "../Transition";
 import PageLayout from "../components/PageLayout";
-import { manga, me } from "../constants/publicAssets.js";
+import { manga } from "../constants/publicAssets.js";
 import content from "../content/home.md?raw";
 
 function Home() {
@@ -10,7 +10,6 @@ function Home() {
                 leftImage={manga.luffy}
                 imageClass="dark:invert"
                 content={content}
-                portraitLink={{ src: me.portrait, to: "/thoughts" }}
             />
         </AnimWrapper>
     );

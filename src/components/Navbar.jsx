@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { resume } from "../constants/publicAssets";
 
-const externalLinkClass =
-  "font-mono text-lg md:text-2xl text-gray-800 dark:text-gray-200 hover:scale-105 transition py-2 md:py-0";
+const navHeadingClass =
+  "font-heading text-[19px] md:text-[25px] text-gray-800 dark:text-gray-200 hover:scale-105 transition py-2 md:py-0";
 
 function Navbar() {
   const [isDark, setIsDark] = useState(() =>
@@ -51,7 +51,7 @@ function Navbar() {
           <div className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-4">
             <Link
               to="/"
-              className="font-mono text-[calc(1.25rem-2pt)] font-bold leading-tight text-gray-900 transition hover:scale-[1.03] sm:text-[calc(1.5rem-2pt)] md:text-[calc(1.875rem-2pt)] dark:text-white"
+              className="font-heading text-[calc(1.25rem-2pt)] font-bold leading-tight text-gray-900 transition hover:scale-[1.03] sm:text-[calc(1.5rem-2pt)] md:text-[calc(1.875rem-2pt)] dark:text-white"
               onClick={() => setMenuOpen(false)}
             >
               <span className="md:hidden">Home</span>
@@ -61,13 +61,18 @@ function Navbar() {
               type="button"
               onClick={toggleDarkMode}
               aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-              className="inline-flex h-11 w-11 shrink-0 items-center justify-center text-gray-700 transition hover:scale-110 active:scale-95 md:h-14 md:w-14 md:scale-110 dark:text-white sm:h-12 sm:w-12"
+              className="inline-flex shrink-0 items-center justify-center font-serif leading-none text-stone-800 transition hover:scale-110 active:scale-95 dark:text-stone-200"
             >
-              {isDark ? (
-                <Sun className="h-7 w-7 md:h-8 md:w-8" />
-              ) : (
-                <Moon className="h-7 w-7 md:h-8 md:w-8" />
-              )}
+              <span
+                aria-hidden="true"
+                className={
+                  isDark
+                    ? "inline-block -translate-x-0.5 translate-y-[0.3125rem] text-[2.2rem]"
+                    : "inline-block translate-y-[0.1875rem] text-[3.094rem]"
+                }
+              >
+                {isDark ? "☼" : "☽"}
+              </span>
             </button>
           </div>
 
@@ -89,7 +94,7 @@ function Navbar() {
         <div className="hidden md:flex md:items-center md:gap-6 lg:gap-8 shrink-0">
           <a
             href="https://jackdouglass.substack.com/"
-            className={externalLinkClass}
+            className={navHeadingClass}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -97,7 +102,7 @@ function Navbar() {
           </a>
           <a
             href={resume}
-            className={`${externalLinkClass} whitespace-nowrap`}
+            className={`${navHeadingClass} whitespace-nowrap`}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -143,7 +148,7 @@ function Navbar() {
             <div className="flex flex-col gap-2">
               <a
                 href="https://jackdouglass.substack.com/"
-                className={externalLinkClass}
+                className={navHeadingClass}
                 target="_blank"
                 rel="noreferrer noopener"
                 onClick={() => setMenuOpen(false)}
@@ -152,7 +157,7 @@ function Navbar() {
               </a>
               <a
                 href={resume}
-                className={`${externalLinkClass} whitespace-nowrap`}
+                className={`${navHeadingClass} whitespace-nowrap`}
                 target="_blank"
                 rel="noreferrer noopener"
                 onClick={() => setMenuOpen(false)}
