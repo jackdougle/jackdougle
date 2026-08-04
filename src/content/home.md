@@ -6,9 +6,9 @@ Hi, I'm Jack. I want to help create a world where no one has to die from prevent
 
 ### What?
 
-I'm currently researching pandemic resilience at Hadrian Biodefense. My background is in biology at the University of Arizona, where I researched sequences of concern as an [ERA Fellow](https://aixbiosecurity.com), designed new diagnostics at an early-stage startup, and helped lead an iGEM team.
+I'm currently interning at [Hadrian Biodefense](https://hadrian.org), researching pandemic preparedness strategies. I've studied biology at the University of Arizona, researched sequences of concern as an [ERA Fellow](https://aixbiosecurity.com), designed new diagnostics at an early-stage startup, and founded an [iGEM](https://igem.org/) team.
 
-I developed [nucleaze](https://github.com/jackdougle/nucleaze) for the SecureBio Detection. If you like Rust and performance optimization, consider [contributing](https://users.rust-lang.org/t/introducing-nucleaze-fast-multi-threaded-k-mer-sequence-filtration/138630)!
+I also developed [nucleaze](https://github.com/jackdougle/nucleaze) for SecureBio Detection. If you like Rust, please consider [contributing](https://users.rust-lang.org/t/introducing-nucleaze-fast-multi-threaded-k-mer-sequence-filtration/138630)!
 
 ### Why?
 
