@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
+import { Analytics } from "@vercel/analytics/react"
 import ScrollToTop from "./ScrollToTop.jsx"
 
 import Navbar from "./components/Navbar.jsx"
@@ -21,6 +22,7 @@ function App() {
                     </Routes>
                 </AnimatePresence>
             </div>
+            <Analytics />
         </div>
     );
 }
