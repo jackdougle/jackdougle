@@ -6,6 +6,7 @@ import { vs, vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism"
 
 const imageBorderClass = "border-2 border-gray-500 rounded-sm";
 const sidePhotoBorderClass = "border-2 border-black rounded-sm dark:border-gray-600";
+const contentImageWidthClass = "mx-auto block w-[90%]";
 
 const codeFont = {
   fontFamily: '"Source Code Pro", ui-monospace, SFMono-Regular, Menlo, monospace',
@@ -95,7 +96,7 @@ function buildComponents(isDark, { blogHeadings = false } = {}) {
       if (isSidePhoto) {
         return (
           <div
-            className={`group mx-auto w-[80%] overflow-hidden aspect-[3090/1249.28] ${sidePhotoBorderClass}`}
+            className={`group ${contentImageWidthClass} overflow-hidden aspect-[3090/1249.28] ${sidePhotoBorderClass}`}
           >
             <img
               src={src}
@@ -109,7 +110,7 @@ function buildComponents(isDark, { blogHeadings = false } = {}) {
         <img
           src={src}
           alt={alt ?? ""}
-          className={`mx-auto block w-full max-w-full md:max-w-[90%] lg:max-w-[68%] ${imageBorderClass}`}
+          className={`${contentImageWidthClass} ${imageBorderClass}`}
         />
       );
     },

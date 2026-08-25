@@ -38,7 +38,7 @@ function BlogPost() {
         </header>
 
         <div className="flex min-w-0 flex-col space-y-4">
-          <Markdown blogHeadings fullWidthImages>{post.content}</Markdown>
+          <Markdown blogHeadings>{post.content}</Markdown>
         </div>
 
         <footer className="mt-10 border-t border-gray-200 pt-5 font-light text-[0.82em] text-gray-500 dark:border-slate-800 dark:text-gray-400">

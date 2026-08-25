@@ -13,15 +13,15 @@ function Blog() {
                                 to={`/blog/${slug}`}
                                 className="group block overflow-hidden rounded-lg border border-gray-200 transition duration-300 hover:border-gray-400 hover:shadow-lg dark:border-slate-800 dark:hover:border-slate-600"
                             >
-                                <div className="aspect-[2/1] overflow-hidden">
+                                <div className="relative aspect-[4/1] overflow-hidden">
                                     <img
                                         src={cover}
                                         alt=""
-                                        className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+                                        className="absolute left-0 top-1/2 h-[200%] w-full -translate-y-1/2 object-cover object-center"
                                     />
                                 </div>
                                 <div className="p-5">
-                                    <p className="mt-1 font-heading text-[20px] font-medium leading-snug transition duration-300 group-hover:text-sky-600 dark:group-hover:text-sky-300">
+                                    <p className="mt-1 font-heading text-[20px] font-medium leading-snug">
                                         {title}
                                     </p>
                                     <div className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
