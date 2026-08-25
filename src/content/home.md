@@ -1,17 +1,13 @@
-### Who?
-
-Hi, I'm Jack. I want to help create a world where no one has to die from preventable disease. I'm also a big fan of story-heavy games, debating my poorly-researched philosophy takes, vegan food, karaoke, and programming.
+Hi, I'm Jack! Among other things, I like biosecurity, anime, and philosophy.
 
 ![](/me/side.jpeg)
 
-### What?
+Currently, I'm thinking about where I can help the world most. Previously, I've [built software](https://users.rust-lang.org/t/introducing-nucleaze-fast-multi-threaded-k-mer-sequence-filtration/138630) for [SecureBio](https://securebio.org), researched pandemic preparedness at [Hadrian Biodefense](https://hadrian.org), improved synthesis screening standards at the [Sequence Biosecurity Risk Consortium](https://sbrc.bio), and designed nucleic acid diagnostics at Strive Bioscience, a Gates Foundation-backed startup.
 
-I'm currently interning at [Hadrian Biodefense](https://hadrian.org), researching pandemic preparedness strategies. I've studied biology at the University of Arizona, researched sequences of concern as an [ERA Fellow](https://aixbiosecurity.com), designed new diagnostics at an early-stage startup, and founded an [iGEM](https://igem.org/) team.
+My work aims to nudge the future in a better direction. If you made your way to this website, you're probably familiar with Effective Altruism and Longtermism. If not, here's roughly why I do what I do:
 
-I also developed [nucleaze](https://github.com/jackdougle/nucleaze) for SecureBio Detection. If you like Rust, please consider [contributing](https://users.rust-lang.org/t/introducing-nucleaze-fast-multi-threaded-k-mer-sequence-filtration/138630)!
+> We're probably at a [Hinge of History](https://www.cold-takes.com/most-important-century/). The world is defined by suffering. We can change that. Why not try?
 
-### Why?
+---
 
-We're probably at the confluence of multiple [Hinges of History](https://www.cold-takes.com/most-important-century/). The world is defined by suffering. We can change that. Why not try?
-
-_Feel free to message me at **jgddouglass [at] gmail [dot] com** and please give me feedback [here](https://www.admonymous.co/jackdouglass)_!
+_Contact me [here](mailto:jgddouglass@gmail.com) and tell me what I can improve on [here](https://www.admonymous.co/jackdouglass)._

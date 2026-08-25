@@ -92,14 +92,9 @@ function Navbar() {
         </button>
 
         <div className="hidden md:flex md:items-center md:gap-6 lg:gap-8 shrink-0">
-          <a
-            href="https://jackdouglass.substack.com/"
-            className={navHeadingClass}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <Link to="/blog" className={navHeadingClass}>
             Blog
-          </a>
+          </Link>
           <a
             href={resume}
             className={`${navHeadingClass} whitespace-nowrap`}
@@ -146,15 +141,13 @@ function Navbar() {
               className="absolute left-4 right-4 top-full z-[4] mt-2 rounded-xl border border-gray-200 dark:border-slate-800 bg-white p-5 shadow-xl dark:bg-black md:hidden"
             >
             <div className="flex flex-col gap-2">
-              <a
-                href="https://jackdouglass.substack.com/"
+              <Link
+                to="/blog"
                 className={navHeadingClass}
-                target="_blank"
-                rel="noreferrer noopener"
                 onClick={() => setMenuOpen(false)}
               >
                 Blog
-              </a>
+              </Link>
               <a
                 href={resume}
                 className={`${navHeadingClass} whitespace-nowrap`}
