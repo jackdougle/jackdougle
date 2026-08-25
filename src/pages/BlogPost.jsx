@@ -14,7 +14,7 @@ function BlogPost() {
     return (
       <AnimWrapper>
         <div className={columnClass}>
-          <p className="font-heading text-[calc(1.5rem-2pt-1px)] font-bold">Post not found.</p>
+          <p className="font-heading text-[calc(1.5rem-2pt)] font-bold">Post not found.</p>
           <p className="mt-4 font-light">
             <Link to="/blog" className="text-sky-600 transition duration-300 hover:text-sky-800 dark:text-sky-300 dark:hover:text-sky-200">
               Back to blog
@@ -29,7 +29,7 @@ function BlogPost() {
     <AnimWrapper>
       <article className={columnClass}>
         <header className="mb-8">
-          <h1 className="font-heading text-[calc(1.75rem-2pt-1px)] font-bold leading-tight text-gray-900 md:text-[calc(2.25rem-2pt-1px)] dark:text-white">
+          <h1 className="font-heading text-[calc(1.75rem-2pt)] font-medium leading-tight text-gray-900 md:text-[calc(2.25rem-2pt)] dark:text-white">
             {post.title}
           </h1>
           {post.subtitle ? (
@@ -38,11 +38,11 @@ function BlogPost() {
         </header>
 
         <div className="flex min-w-0 flex-col space-y-4">
-          <Markdown fullWidthImages>{post.content}</Markdown>
+          <Markdown blogHeadings fullWidthImages>{post.content}</Markdown>
         </div>
 
         <footer className="mt-10 border-t border-gray-200 pt-5 font-light text-[0.82em] text-gray-500 dark:border-slate-800 dark:text-gray-400">
-          Engage on{" "}
+          Originally published on{" "}
           <a
             href={post.substack}
             target="_blank"

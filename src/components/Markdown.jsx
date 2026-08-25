@@ -25,30 +25,32 @@ function useDarkMode() {
   return isDark;
 }
 
-function buildComponents(isDark) {
+function buildComponents(isDark, { blogHeadings = false } = {}) {
+  const sectionFont = blogHeadings ? "font-blog-heading" : "font-heading";
+
   return {
     h1: ({ children }) => (
-      <p className="font-blog-heading text-[calc(1.875rem-2pt-1px)] text-gray-900 sm:text-[calc(2.25rem-2pt-1px)] md:text-[calc(3rem-2pt-1px)] dark:text-white">
+      <p className={`${sectionFont} text-[calc(1.875rem-2pt-1px)] text-gray-900 sm:text-[calc(2.25rem-2pt-1px)] md:text-[calc(3rem-2pt-1px)] dark:text-white`}>
         {children}
       </p>
     ),
     h2: ({ children }) => (
-      <p className="font-blog-heading text-[calc(1.5rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.875rem-2pt-1px)] md:text-[calc(2.25rem-2pt-1px)] dark:text-white">
+      <p className={`${sectionFont} text-[calc(1.5rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.875rem-2pt-1px)] md:text-[calc(2.25rem-2pt-1px)] dark:text-white`}>
         {children}
       </p>
     ),
     h3: ({ children }) => (
-      <p className="font-blog-heading text-[calc(1.25rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.5rem-2pt-1px)] md:text-[calc(1.875rem-2pt-1px)] dark:text-white">
+      <p className={`${sectionFont} text-[calc(1.25rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.5rem-2pt-1px)] md:text-[calc(1.875rem-2pt-1px)] dark:text-white`}>
         {children}
       </p>
     ),
     h4: ({ children }) => (
-      <p className="font-blog-heading text-[calc(1.125rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.25rem-2pt-1px)] md:text-[calc(1.5rem-2pt-1px)] dark:text-white">
+      <p className={`${sectionFont} text-[calc(1.125rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.25rem-2pt-1px)] md:text-[calc(1.5rem-2pt-1px)] dark:text-white`}>
         {children}
       </p>
     ),
     h5: ({ children }) => (
-      <p className="font-blog-heading text-[calc(1rem-2pt-1px)] text-gray-900 sm:text-[calc(1.125rem-2pt-1px)] md:text-[calc(21px-2pt-1px)] dark:text-white">
+      <p className={`${sectionFont} text-[calc(1rem-2pt-1px)] text-gray-900 sm:text-[calc(1.125rem-2pt-1px)] md:text-[calc(21px-2pt-1px)] dark:text-white`}>
         {children}
       </p>
     ),
@@ -93,7 +95,7 @@ function buildComponents(isDark) {
       if (isSidePhoto) {
         return (
           <div
-            className={`group mx-auto w-[90%] overflow-hidden aspect-[3090/1249.28] ${sidePhotoBorderClass}`}
+            className={`group mx-auto w-[80%] overflow-hidden aspect-[3090/1249.28] ${sidePhotoBorderClass}`}
           >
             <img
               src={src}
@@ -107,7 +109,7 @@ function buildComponents(isDark) {
         <img
           src={src}
           alt={alt ?? ""}
-          className={`mx-auto block w-[90%] max-w-full ${imageBorderClass}`}
+          className={`mx-auto block w-full max-w-full md:max-w-[90%] lg:max-w-[68%] ${imageBorderClass}`}
         />
       );
     },
@@ -181,10 +183,10 @@ function buildComponents(isDark) {
   };
 }
 
-function Markdown({ children }) {
+function Markdown({ children, blogHeadings = false }) {
   const isDark = useDarkMode();
   return (
-    <ReactMarkdown remarkPlugins={[remarkGfm]} components={buildComponents(isDark)}>
+    <ReactMarkdown remarkPlugins={[remarkGfm]} components={buildComponents(isDark, { blogHeadings })}>
       {children}
     </ReactMarkdown>
   );

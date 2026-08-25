@@ -58,10 +58,10 @@ function Navbar({ onHeightChange }) {
     >
       <div className={`relative mx-auto w-full max-w-7xl ${isSm ? "px-8 py-3" : "px-4 py-1"}`}>
         <div className={`relative z-[3] flex w-full items-center justify-between min-w-0 ${isSm ? "gap-4" : "gap-2"}`}>
-          <div className={`flex min-w-0 shrink-0 items-center ${isSm ? "gap-4" : "gap-2"}`}>
+          <div className="flex min-w-0 shrink-0 items-center">
             <Link
               to="/"
-              className={`font-heading font-bold leading-tight text-gray-900 transition hover:scale-[1.03] dark:text-white ${
+              className={`font-heading font-medium leading-tight text-gray-900 transition hover:scale-[1.03] dark:text-white ${
                 isMd
                   ? "text-[calc(1.875rem-2pt-1px)]"
                   : isSm
@@ -75,6 +75,9 @@ function Navbar({ onHeightChange }) {
                 <span>Home</span>
               )}
             </Link>
+          </div>
+
+          <div className={`flex items-center shrink-0 ${isLg ? "gap-8" : isSm ? "gap-6" : "gap-4"}`}>
             <button
               type="button"
               onClick={toggleDarkMode}
@@ -87,9 +90,6 @@ function Navbar({ onHeightChange }) {
                 <Moon className={iconClass} aria-hidden="true" />
               )}
             </button>
-          </div>
-
-          <div className={`flex items-center shrink-0 ${isLg ? "gap-8" : isSm ? "gap-6" : "gap-4"}`}>
             <Link to="/blog" className={navHeadingClass}>
               Blog
             </Link>

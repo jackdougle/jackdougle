@@ -1,7 +1,5 @@
 *Note: I have no conception of how computational fluid dynamics or public space regulation & modification works. Bad assumptions likely abound here. That being said, I hope this post sparks someone’s curiosity.*
 
----
-
 Despite the fact houses played host to the majority of COVID-19 transmission, I think another building type, supermarkets, may be a better target for biohardening in the near-to-medium term. Supermarkets are essential for societal function and won’t close down en masse unless we’re in an existentially-threatening pandemic[^1].
 
 Up until that point, supermarkets only get **more** important as pandemics worsen in severity. If people are sufficiently scared they’ll contract a dangerous pathogen if they venture outside, they’ll sacrifice frivolous social outings and work from home. However, they’ll still have to buy groceries at a meaningful frequency, meaning in-supermarket transmission might contribute proportionately more to pandemic spread. I’d also be remiss not to mention supermarket workers here. Many may very well put their lives on the line in a future pandemic, and deserve the best fortifications society can build.
