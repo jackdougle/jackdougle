@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Source+Code+Pro:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400..700;1,400..700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Source+Code+Pro:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
   /* Shared rail art height (Luffy / Haise). Use via `h-manga-rail`. */
   --height-manga-rail: 400px;
   --font-serif: "Newsreader", "Times New Roman", serif;
-  --font-heading: "Merriweather", Georgia, serif;
+  --font-blog-heading: "Lora", Georgia, serif;
+  --font-heading: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -16,11 +17,9 @@ html, body, #root {
   font-family: var(--font-serif);
 }
 
-/* Shrinks desktop layout globally; disabling on small viewports avoids odd mobile sizing. */
-@media (min-width: 1024px) {
-  html {
-    zoom: 0.81;
-  }
+/* Shrinks desktop layout; toggled via JS (outerWidth) so Cmd +/- zoom can't flip it. */
+.desktop-scale {
+  zoom: 0.81;
 }
 
 html.dark {

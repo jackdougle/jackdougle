@@ -28,27 +28,27 @@ function useDarkMode() {
 function buildComponents(isDark) {
   return {
     h1: ({ children }) => (
-      <p className="font-heading text-[calc(1.875rem-2pt)] text-gray-900 sm:text-[calc(2.25rem-2pt)] md:text-[calc(3rem-2pt)] dark:text-white">
+      <p className="font-blog-heading text-[calc(1.875rem-2pt-1px)] text-gray-900 sm:text-[calc(2.25rem-2pt-1px)] md:text-[calc(3rem-2pt-1px)] dark:text-white">
         {children}
       </p>
     ),
     h2: ({ children }) => (
-      <p className="font-heading text-[calc(1.5rem-2pt)] font-bold text-gray-900 sm:text-[calc(1.875rem-2pt)] md:text-[calc(2.25rem-2pt)] dark:text-white">
+      <p className="font-blog-heading text-[calc(1.5rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.875rem-2pt-1px)] md:text-[calc(2.25rem-2pt-1px)] dark:text-white">
         {children}
       </p>
     ),
     h3: ({ children }) => (
-      <p className="font-heading text-[calc(1.25rem-2pt)] font-bold text-gray-900 sm:text-[calc(1.5rem-2pt)] md:text-[calc(1.875rem-2pt)] dark:text-white">
+      <p className="font-blog-heading text-[calc(1.25rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.5rem-2pt-1px)] md:text-[calc(1.875rem-2pt-1px)] dark:text-white">
         {children}
       </p>
     ),
     h4: ({ children }) => (
-      <p className="font-heading text-[calc(1.125rem-2pt)] font-bold text-gray-900 sm:text-[calc(1.25rem-2pt)] md:text-[calc(1.5rem-2pt)] dark:text-white">
+      <p className="font-blog-heading text-[calc(1.125rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.25rem-2pt-1px)] md:text-[calc(1.5rem-2pt-1px)] dark:text-white">
         {children}
       </p>
     ),
     h5: ({ children }) => (
-      <p className="font-heading text-[calc(1rem-2pt)] text-gray-900 sm:text-[calc(1.125rem-2pt)] md:text-[calc(21px-2pt)] dark:text-white">
+      <p className="font-blog-heading text-[calc(1rem-2pt-1px)] text-gray-900 sm:text-[calc(1.125rem-2pt-1px)] md:text-[calc(21px-2pt-1px)] dark:text-white">
         {children}
       </p>
     ),
@@ -70,7 +70,7 @@ function buildComponents(isDark) {
       </li>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="border-l-2 border-gray-300 pl-4 italic text-gray-700 dark:border-slate-700 dark:text-gray-300">
+      <blockquote className="border-l-2 border-gray-300 pl-4 text-gray-700 dark:border-slate-700 dark:text-gray-300">
         {children}
       </blockquote>
     ),
@@ -92,11 +92,13 @@ function buildComponents(isDark) {
       const isSidePhoto = src?.includes("side.jpeg");
       if (isSidePhoto) {
         return (
-          <div className={`group relative mx-auto w-full max-w-full overflow-hidden md:max-w-[75%] lg:max-w-[56%] aspect-[3090/1699.84] ${sidePhotoBorderClass}`}>
+          <div
+            className={`group mx-auto w-[90%] overflow-hidden aspect-[3090/1249.28] ${sidePhotoBorderClass}`}
+          >
             <img
               src={src}
               alt={alt ?? ""}
-              className="absolute bottom-0 left-0 h-auto w-[125%] max-w-none -translate-x-[20%] transition-[filter] duration-300 group-hover:grayscale"
+              className="h-full w-full object-cover object-bottom transition-[filter] duration-300 group-hover:grayscale"
             />
           </div>
         );
@@ -105,7 +107,7 @@ function buildComponents(isDark) {
         <img
           src={src}
           alt={alt ?? ""}
-          className={`mx-auto block w-full max-w-full md:max-w-[90%] lg:max-w-[68%] ${imageBorderClass}`}
+          className={`mx-auto block w-[90%] max-w-full ${imageBorderClass}`}
         />
       );
     },

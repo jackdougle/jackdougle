@@ -5,7 +5,7 @@ import content from "../content/home.md?raw";
 
 function Home() {
     return (
-        <AnimWrapper>
+        <AnimWrapper slide={false}>
             <PageLayout
                 leftImage={manga.luffy}
                 imageClass="dark:invert"
