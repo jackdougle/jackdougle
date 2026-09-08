@@ -156,7 +156,7 @@ function paintProgressivePixelation(canvas, img, cssW, cssH, pixelSize, progress
   }
 }
 
-function PixelateHoverImage({ src, alt, frameClass, imgClass, pixelSize = 5, clumpScale = 5 }) {
+function PixelateHoverImage({ src, alt, frameClass, imgClass, pixelSize = 5, clumpScale = 5, onClick }) {
   const frameRef = useRef(null);
   const imgRef = useRef(null);
   const canvasRef = useRef(null);
@@ -280,6 +280,18 @@ function PixelateHoverImage({ src, alt, frameClass, imgClass, pixelSize = 5, clu
       ref={frameRef}
       className={`pixelate-hover ${frameClass}`}
       tabIndex={0}
+      onClick={onClick}
+      onKeyDown={
+        onClick
+          ? (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onClick(e);
+              }
+            }
+          : undefined
+      }
+      role={onClick ? "button" : undefined}
     >
       <img
         ref={imgRef}

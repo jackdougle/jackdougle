@@ -3,10 +3,9 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vs, vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
-import PixelateHoverImage from "./PixelateHoverImage";
+import SidePortrait from "./SidePortrait";
 
 const imageBorderClass = "border-2 border-gray-500 rounded-sm";
-const sidePhotoBorderClass = "border-2 border-black rounded-sm dark:border-gray-600";
 const contentImageWidthClass = "mx-auto block w-[90%]";
 
 const codeFont = {
@@ -104,14 +103,7 @@ function buildComponents(isDark, { sectionHeadings = false } = {}) {
     img: ({ src, alt }) => {
       const isSidePhoto = src?.includes("side.jpeg");
       if (isSidePhoto) {
-        return (
-          <PixelateHoverImage
-            src={src}
-            alt={alt ?? ""}
-            frameClass={`${contentImageWidthClass} aspect-[3090/1249.28] ${sidePhotoBorderClass}`}
-            imgClass="h-full w-full object-cover object-bottom"
-          />
-        );
+        return <SidePortrait src={src} alt={alt ?? ""} />;
       }
       return (
         <img
