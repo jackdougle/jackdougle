@@ -12,7 +12,6 @@ function Navbar({ onHeightChange }) {
   const desktopFactor = isLg ? DESKTOP_SCALE : 1;
   const cssZoom = desktopFactor / browserZoom;
   const widthVw = (browserZoom / desktopFactor) * 100;
-  const navHeadingClass = `font-heading ${isMd ? "text-[24px] py-0" : "text-[18px] py-2"} text-gray-800 dark:text-gray-200 hover:scale-105 transition`;
   const iconClass = isSm ? "h-8 w-8" : "h-7 w-7";
   const [isDark, setIsDark] = useState(() =>
     document.documentElement.classList.contains("dark")
@@ -90,9 +89,6 @@ function Navbar({ onHeightChange }) {
                 <Moon className={iconClass} aria-hidden="true" />
               )}
             </button>
-            <Link to="/blog" className={navHeadingClass}>
-              Blog
-            </Link>
             <a
               href="https://github.com/jackdougle"
               aria-label="GitHub"

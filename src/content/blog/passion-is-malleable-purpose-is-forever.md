@@ -7,8 +7,6 @@ Let’s say you’re deciding between two jobs. Job 1 is **handily more impactfu
 
 *Note: I’m not really sure where compensation fits into this. It usually directly enhances both variables, hence I’m not factoring it into my definition of impact or enjoyment.*
 
-![](/blog/passion-is-malleable-purpose-is-forever.jpeg)
-
 ### Impact at the cost of enjoyment
 
 Anecdotally, I feel like people think that increasing the amount you do for others *inherently* decreases your own valence (through a new self-imposed burden). I think this stems from a society-wide intuition that associates “doing good” with small-scale physical gestures (i.e. helping an old lady cross the street). Put crudely, such acts are admirable because someone experiences a bad thing so others can experience good things.

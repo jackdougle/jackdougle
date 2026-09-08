@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Routes, Route, useLocation } from "react-router-dom"
+import { Navigate, Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 import ScrollToTop from "./ScrollToTop.jsx"
 import { useLayoutViewport } from "./hooks/useLayoutViewport.js"
@@ -7,7 +7,6 @@ import { useLayoutViewport } from "./hooks/useLayoutViewport.js"
 import Navbar from "./components/Navbar.jsx"
 import Home from "./pages/Home.jsx"
 import Thoughts from "./pages/Thoughts.jsx"
-import Blog from "./pages/Blog.jsx"
 import BlogPost from "./pages/BlogPost.jsx"
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
                         <Routes location={location} key={location.pathname}>
                             <Route path="/" element={<Home />} />
                             <Route path="/thoughts" element={<Thoughts />} />
-                            <Route path="/blog" element={<Blog />} />
+                            <Route path="/blog" element={<Navigate to="/#blog" replace />} />
                             <Route path="/blog/:slug" element={<BlogPost />} />
                         </Routes>
                     </AnimatePresence>

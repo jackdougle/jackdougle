@@ -5,15 +5,26 @@
 import biohardeningSupermarkets from "./biohardening-supermarkets.md?raw";
 import makeAccomplishmentsLegible from "./make-your-accomplishments-publicly.md?raw";
 import passionIsMalleable from "./passion-is-malleable-purpose-is-forever.md?raw";
+import writingMoreAndBetter from "./writing-more-and-better.md?raw";
 
 export const posts = [
+  {
+    slug: "writing-more-and-better",
+    title: "Writing More and Better",
+    subtitle: "An implicit promise to improve my blogging schedule",
+    date: "2026-09-08",
+    section: "Writing",
+    cover: "/blog/writing-more-and-better-pixelated.png",
+    substack: "https://jackdouglass.substack.com/p/writing-more-and-better",
+    content: writingMoreAndBetter,
+  },
   {
     slug: "biohardening-supermarkets",
     title: "Biohardening Supermarkets",
     subtitle: "A hypothesis for protecting a critical node of society",
     date: "2026-07-14",
     section: "Biosecurity",
-    cover: "/blog/biohardening-supermarkets-ascii.png",
+    cover: "/blog/biohardening-supermarkets-pixelated.png",
     substack: "https://jackdouglass.substack.com/p/biohardening-supermarkets",
     content: biohardeningSupermarkets,
   },
@@ -23,7 +34,7 @@ export const posts = [
     subtitle: "LinkedInmaxx",
     date: "2026-04-15",
     section: "Impact & Careers",
-    cover: "/blog/make-your-accomplishments-publicly-ascii.png",
+    cover: "/blog/make-your-accomplishments-publicly-pixelated.png",
     substack: "https://jackdouglass.substack.com/p/make-your-accomplishments-publicly",
     content: makeAccomplishmentsLegible,
   },
@@ -33,7 +44,7 @@ export const posts = [
     subtitle: "Transmute impact into enjoyment",
     date: "2026-03-22",
     section: "Impact & Careers",
-    cover: "/blog/passion-is-malleable-purpose-is-forever-ascii.png",
+    cover: "/blog/passion-is-malleable-purpose-is-forever-pixelated.png",
     substack: "https://jackdouglass.substack.com/p/passion-is-malleable-purpose-is-forever",
     content: passionIsMalleable,
   },

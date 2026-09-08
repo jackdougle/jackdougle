@@ -1,6 +1,6 @@
 import Markdown from "./Markdown.jsx";
 
-function PageLayout({ leftImage, rightImage, content, imageClass = "" }) {
+function PageLayout({ leftImage, rightImage, content, imageClass = "", sectionHeadings = false }) {
   return (
     <div className="flex w-full flex-col lg:flex-row lg:items-stretch">
       {/* Left rail (Luffy): viewport-pinned to the bottom; the div only reserves
@@ -18,7 +18,7 @@ function PageLayout({ leftImage, rightImage, content, imageClass = "" }) {
 
       <div className="relative z-10 flex w-full min-w-0 max-w-[800px] flex-col px-4 font-serif text-[18px] text-gray-900 sm:px-6 sm:text-[19px] md:px-10 md:text-[22px] lg:w-[800px] lg:flex-shrink-0 lg:px-[50px] lg:text-[23px] dark:text-gray-100">
         <div className="flex min-w-0 flex-col space-y-4">
-          <Markdown>{content}</Markdown>
+          <Markdown sectionHeadings={sectionHeadings}>{content}</Markdown>
         </div>
       </div>
 

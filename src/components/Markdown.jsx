@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vs, vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import PixelateHoverImage from "./PixelateHoverImage";
 
 const imageBorderClass = "border-2 border-gray-500 rounded-sm";
 const sidePhotoBorderClass = "border-2 border-black rounded-sm dark:border-gray-600";
@@ -26,36 +27,45 @@ function useDarkMode() {
   return isDark;
 }
 
-function buildComponents(isDark, { blogHeadings = false } = {}) {
-  const sectionFont = blogHeadings ? "font-blog-heading" : "font-heading";
+function buildComponents(isDark, { sectionHeadings = false } = {}) {
+  const sectionFont = "font-heading";
+  const pageSectionClass =
+    `${sectionFont} mb-3 text-[calc(1.5rem-4pt-2px)] font-medium text-gray-900 sm:text-[calc(1.875rem-4pt-2px)] dark:text-white`;
+  const h3Class = `${sectionFont} text-[calc(1.25rem-2pt-2px)] font-medium text-gray-900 sm:text-[calc(1.5rem-2pt-2px)] md:text-[calc(1.875rem-2pt-2px)] dark:text-white`;
 
   return {
     h1: ({ children }) => (
-      <p className={`${sectionFont} text-[calc(1.875rem-2pt-1px)] text-gray-900 sm:text-[calc(2.25rem-2pt-1px)] md:text-[calc(3rem-2pt-1px)] dark:text-white`}>
+      <p className={`${sectionFont} text-[calc(1.875rem-2pt-2px)] font-light text-gray-900 sm:text-[calc(2.25rem-2pt-2px)] md:text-[calc(3rem-2pt-2px)] dark:text-white`}>
         {children}
       </p>
     ),
-    h2: ({ children }) => (
-      <p className={`${sectionFont} text-[calc(1.5rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.875rem-2pt-1px)] md:text-[calc(2.25rem-2pt-1px)] dark:text-white`}>
-        {children}
-      </p>
-    ),
-    h3: ({ children }) => (
-      <p className={`${sectionFont} text-[calc(1.25rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.5rem-2pt-1px)] md:text-[calc(1.875rem-2pt-1px)] dark:text-white`}>
-        {children}
-      </p>
-    ),
+    // remark-gfm emits its "Footnotes" label as an h2; render it at h3 size.
+    h2: ({ children, id }) =>
+      id === "footnote-label" ? (
+        <p id={id} className={h3Class}>{children}</p>
+      ) : sectionHeadings ? (
+        <h2 className={pageSectionClass}>{children}</h2>
+      ) : (
+        <p className={`${sectionFont} text-[calc(1.5rem-2pt-2px)] font-medium text-gray-900 sm:text-[calc(1.875rem-2pt-2px)] md:text-[calc(2.25rem-2pt-2px)] dark:text-white`}>
+          {children}
+        </p>
+      ),
+    h3: ({ children }) => <p className={h3Class}>{children}</p>,
     h4: ({ children }) => (
-      <p className={`${sectionFont} text-[calc(1.125rem-2pt-1px)] font-bold text-gray-900 sm:text-[calc(1.25rem-2pt-1px)] md:text-[calc(1.5rem-2pt-1px)] dark:text-white`}>
+      <p className={`${sectionFont} text-[calc(1.125rem-2pt-2px)] font-medium text-gray-900 sm:text-[calc(1.25rem-2pt-2px)] md:text-[calc(1.5rem-2pt-2px)] dark:text-white`}>
         {children}
       </p>
     ),
     h5: ({ children }) => (
-      <p className={`${sectionFont} text-[calc(1rem-2pt-1px)] text-gray-900 sm:text-[calc(1.125rem-2pt-1px)] md:text-[calc(21px-2pt-1px)] dark:text-white`}>
+      <p className={`${sectionFont} text-[calc(1rem-2pt-2px)] font-light text-gray-900 sm:text-[calc(1.125rem-2pt-2px)] md:text-[calc(21px-2pt-2px)] dark:text-white`}>
         {children}
       </p>
     ),
-    p: ({ children }) => <p className="font-light">{children}</p>,
+    p: ({ children }) => (
+      <p className="font-light [&>strong:only-child]:font-bold [&>strong:only-child]:text-gray-900 dark:[&>strong:only-child]:text-white">
+        {children}
+      </p>
+    ),
     // These spread props so remark-gfm's footnote `id`s survive and ref links can jump.
     ul: ({ children, ...props }) => (
       <ul className="list-disc space-y-2 pl-6 font-light marker:text-gray-400 dark:marker:text-gray-500" {...props}>
@@ -77,12 +87,12 @@ function buildComponents(isDark, { blogHeadings = false } = {}) {
         {children}
       </blockquote>
     ),
-    hr: () => <hr className="my-8 border-gray-200 dark:border-slate-800" />,
+    hr: () => <hr className="mt-1 mb-8 border-gray-200 dark:border-slate-800" />,
     // remark-gfm renders footnote definitions inside <section class="footnotes">.
     section: ({ className, children, ...props }) =>
       className?.includes("footnotes") ? (
         <section
-          className="mt-10 border-t border-gray-200 pt-6 text-[0.82em] leading-relaxed dark:border-slate-800"
+          className="mt-4 border-t border-gray-200 pt-3 text-[0.82em] leading-relaxed dark:border-slate-800"
           {...props}
         >
           {children}
@@ -95,15 +105,12 @@ function buildComponents(isDark, { blogHeadings = false } = {}) {
       const isSidePhoto = src?.includes("side.jpeg");
       if (isSidePhoto) {
         return (
-          <div
-            className={`group ${contentImageWidthClass} overflow-hidden aspect-[3090/1249.28] ${sidePhotoBorderClass}`}
-          >
-            <img
-              src={src}
-              alt={alt ?? ""}
-              className="h-full w-full object-cover object-bottom transition-[filter] duration-300 group-hover:grayscale"
-            />
-          </div>
+          <PixelateHoverImage
+            src={src}
+            alt={alt ?? ""}
+            frameClass={`${contentImageWidthClass} aspect-[3090/1249.28] ${sidePhotoBorderClass}`}
+            imgClass="h-full w-full object-cover object-bottom"
+          />
         );
       }
       return (
@@ -184,10 +191,10 @@ function buildComponents(isDark, { blogHeadings = false } = {}) {
   };
 }
 
-function Markdown({ children, blogHeadings = false }) {
+function Markdown({ children, sectionHeadings = false }) {
   const isDark = useDarkMode();
   return (
-    <ReactMarkdown remarkPlugins={[remarkGfm]} components={buildComponents(isDark, { blogHeadings })}>
+    <ReactMarkdown remarkPlugins={[remarkGfm]} components={buildComponents(isDark, { sectionHeadings })}>
       {children}
     </ReactMarkdown>
   );

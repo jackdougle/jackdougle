@@ -1,7 +1,5 @@
 TL;DR: People pursuing impact generally do cool-sounding stuff. They should make said stuff easily discoverable on social media so others can find, admire, and get inspired to do similar work.
 
-![](/blog/make-your-accomplishments-publicly.jpeg)
-
 I’ve noticed a strange trend whilst browsing LinkedIn: the profiles of those pursuing effective careers are, on average, less verbose and more understated than those of similar status in adjacent (and generally less impactful) industries. I think there’s two reasons at play…
 
 ### It’s hard to justify time and money on PR
@@ -17,7 +15,5 @@ This sentiment, though hyperbolic, underscores what I believe to be a reactionar
 An understated digital presence on LinkedIn, Substack, and Twitter keeps your work invisible to people outside your circles. The people who most need to see that pandemic prevention is something urgent and tractable aren’t at EAGs or learning about your work through anecdotes at a Rationalist Bay Area party. They’re on LinkedIn, watching a Cluely ad, slowly internalizing that pumping out AI slop with a startup wrapper is the only way they’ll overcome Maslow’s Hierarchy of Needs. We can show them otherwise. We can show them their technical abilities and naive ambition can actualize truly heroic aims. I’m profoundly lucky that happened to me, with no thanks to those who preserved their contrarian minimalism over online legibility.
 
 Personal visibility isn’t vanity, it’s a vehicle for diffusing important ideas! EAs forget that an exceptionally impactful career is incredibly untraditional and worthy of renown in the mainstream circles. When it’s clear that your work betters the lives of thousands, you become a memorable case study someone could latch onto when scrolling LinkedIn. Your profile could be the start of their rabbit hole into discourse around important problems, what people are doing about them, and how they can help!
-
----
 
 So, update your LinkedIn! Write a verbose summary of what you’re interested in and how it connects to important problems. Write about how your career transition 10x’d your personal fulfillment. Talk about how you work with incredibly interesting concepts, technologies, and people while profoundly improving lives! Impactful careers are amazing but so hard to find, let’s fix that!
