@@ -41,17 +41,24 @@ function BlogPost() {
           <Markdown>{post.content}</Markdown>
         </div>
 
-        <footer className="mt-10 font-light italic text-[0.82em] text-gray-900 dark:text-gray-100">
-          Available on{" "}
-          <a
-            href={post.substack}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="text-sky-600 transition duration-300 hover:text-sky-800 dark:text-sky-300 dark:hover:text-sky-200"
-          >
-            Substack
-          </a>
-        </footer>
+        {post.substack ? (
+          <>
+            <hr className="mt-5 mb-4 border-gray-200 dark:border-slate-800" />
+
+            <footer className="font-light italic text-gray-900 dark:text-gray-100">
+              Available on{" "}
+              <a
+                href={post.substack}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="text-sky-600 transition duration-300 hover:text-sky-800 dark:text-sky-300 dark:hover:text-sky-200"
+              >
+                Substack
+              </a>
+              .
+            </footer>
+          </>
+        ) : null}
       </article>
     </AnimWrapper>
   );

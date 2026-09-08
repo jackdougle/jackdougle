@@ -31,6 +31,9 @@ function buildComponents(isDark, { sectionHeadings = false } = {}) {
   const pageSectionClass =
     `${sectionFont} mb-3 text-[calc(1.5rem-4pt-2px)] font-medium text-gray-900 sm:text-[calc(1.875rem-4pt-2px)] dark:text-white`;
   const h3Class = `${sectionFont} text-[calc(1.25rem-2pt-2px)] font-medium text-gray-900 sm:text-[calc(1.5rem-2pt-2px)] md:text-[calc(1.875rem-2pt-2px)] dark:text-white`;
+  const blogH2SizeClass =
+    `${sectionFont} text-[calc(1.5rem-2pt-2px)] text-gray-900 sm:text-[calc(1.875rem-2pt-2px)] md:text-[calc(2.25rem-2pt-2px)] dark:text-white`;
+  const blogH2Class = `${blogH2SizeClass} font-medium`;
 
   return {
     h1: ({ children }) => (
@@ -38,16 +41,14 @@ function buildComponents(isDark, { sectionHeadings = false } = {}) {
         {children}
       </p>
     ),
-    // remark-gfm emits its "Footnotes" label as an h2; render it at h3 size.
+    // remark-gfm emits its "Footnotes" label as an h2.
     h2: ({ children, id }) =>
       id === "footnote-label" ? (
-        <p id={id} className={h3Class}>{children}</p>
+        <p id={id} className={`${blogH2Class} mb-1`}>{children}</p>
       ) : sectionHeadings ? (
         <h2 className={pageSectionClass}>{children}</h2>
       ) : (
-        <p className={`${sectionFont} text-[calc(1.5rem-2pt-2px)] font-medium text-gray-900 sm:text-[calc(1.875rem-2pt-2px)] md:text-[calc(2.25rem-2pt-2px)] dark:text-white`}>
-          {children}
-        </p>
+        <p className={blogH2Class}>{children}</p>
       ),
     h3: ({ children }) => <p className={h3Class}>{children}</p>,
     h4: ({ children }) => (
@@ -86,12 +87,12 @@ function buildComponents(isDark, { sectionHeadings = false } = {}) {
         {children}
       </blockquote>
     ),
-    hr: () => <hr className="mt-1 mb-8 border-gray-200 dark:border-slate-800" />,
+    hr: () => <hr className="mt-5 mb-4 border-gray-200 dark:border-slate-800" />,
     // remark-gfm renders footnote definitions inside <section class="footnotes">.
     section: ({ className, children, ...props }) =>
       className?.includes("footnotes") ? (
         <section
-          className="mt-4 border-t border-gray-200 pt-3 text-[0.82em] leading-relaxed dark:border-slate-800"
+          className="mt-5 border-t border-gray-200 pt-4 font-light leading-relaxed dark:border-slate-800"
           {...props}
         >
           {children}

@@ -24,7 +24,7 @@ function BlogList() {
               <span className="shrink-0 font-heading text-[15px] font-light text-gray-500 sm:text-[16px] md:text-[17px] dark:text-gray-400">
                 {formatDate(date)}
               </span>
-              <span className="font-blog-heading text-[18px] font-light leading-snug transition duration-300 sm:text-[19px] md:text-[22px] lg:text-[23px] group-hover:text-sky-600 dark:group-hover:text-sky-300">
+              <span className="font-blog-heading text-[calc(18px-1pt)] font-light leading-snug transition duration-300 sm:text-[calc(19px-1pt)] md:text-[calc(22px-1pt)] lg:text-[calc(23px-1pt)] group-hover:text-sky-600 dark:group-hover:text-sky-300">
                 {title}
               </span>
             </Link>
