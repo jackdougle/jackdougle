@@ -4,7 +4,7 @@ import Markdown from "../components/Markdown";
 import { getPost } from "../content/blog/index.js";
 
 const columnClass =
-  "mx-auto w-full min-w-0 max-w-[960px] px-4 font-serif text-[17px] text-gray-900 sm:px-6 sm:text-[18px] md:px-10 md:text-[21px] lg:px-[50px] lg:text-[22px] dark:text-gray-100";
+  "mx-auto w-full min-w-0 max-w-[960px] px-4 font-serif text-[18px] text-gray-900 sm:px-6 sm:text-[19px] md:px-10 md:text-[22px] lg:px-[50px] lg:text-[23px] dark:text-gray-100";
 
 function BlogPost() {
   const { slug } = useParams();

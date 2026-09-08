@@ -54,8 +54,8 @@ export function getPost(slug) {
   return posts.find((p) => p.slug === slug);
 }
 
-/** "2026-07-14" -> "07.14.2026" */
+/** "2026-07-14" -> "07.2026" */
 export function formatDate(date) {
-  const [y, m, d] = date.split("-");
-  return `${m}.${d}.${y}`;
+  const [y, m] = date.split("-");
+  return `${m}.${y}`;
 }
