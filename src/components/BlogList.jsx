@@ -12,7 +12,7 @@ function BlogList() {
         id="blog-heading"
         className="mb-3 text-[calc(1.875rem-4pt-2px)] font-medium sm:text-[calc(2.25rem-4pt-2px)]"
       >
-        Blog
+        More words
       </h2>
       <ul className="space-y-4">
         {posts.map(({ slug, title, date }) => (

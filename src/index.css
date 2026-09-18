@@ -169,6 +169,17 @@ html.dark .sphere-plate {
 .pixelate-hover-photo {
   display: block;
 }
+
+.pixelate-hover-photo,
+.pixelate-hover-canvas {
+  filter: brightness(1.32) contrast(0.94);
+}
+
+html.dark .pixelate-hover-photo,
+html.dark .pixelate-hover-canvas {
+  filter: none;
+}
+
 .pixelate-hover-canvas {
   position: absolute;
   display: block;
