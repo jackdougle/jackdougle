@@ -3,11 +3,24 @@
  * ported from jackdouglass.substack.com.
  */
 import biohardeningSupermarkets from "./biohardening-supermarkets.md?raw";
+import introducingNucleaze from "./introducing-nucleaze.md?raw";
 import makeAccomplishmentsLegible from "./make-your-accomplishments-publicly.md?raw";
 import passionIsMalleable from "./passion-is-malleable-purpose-is-forever.md?raw";
 import writingMoreAndBetter from "./writing-more-and-better.md?raw";
 
 export const posts = [
+  {
+    slug: "introducing-nucleaze",
+    title: "Introducing Nucleaze",
+    subtitle: "Fast & multi-threaded k-mer sequence filtration",
+    date: "2026-03-01",
+    section: "Software",
+    cover: "/blog/introducing-nucleaze-pixelated.png",
+    sourceUrl:
+      "https://users.rust-lang.org/t/introducing-nucleaze-fast-multi-threaded-k-mer-sequence-filtration/138630",
+    sourceLabel: "the Rust Forum",
+    content: introducingNucleaze,
+  },
   {
     slug: "writing-more-and-better",
     title: "Writing More and Better",
@@ -54,8 +67,8 @@ export function getPost(slug) {
   return posts.find((p) => p.slug === slug);
 }
 
-/** "2026-07-14" -> "07.2026" */
+/** "2026-07-14" -> "07.14.2026" */
 export function formatDate(date) {
-  const [y, m] = date.split("-");
-  return `${m}.${y}`;
+  const [y, m, d] = date.split("-");
+  return `${m}.${d}.${y}`;
 }

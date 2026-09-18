@@ -115,14 +115,17 @@ function buildComponents(isDark, { sectionHeadings = false } = {}) {
       );
     },
     pre: ({ children }) => (
-      <pre className="w-full overflow-x-auto rounded border-0 bg-gray-50 p-4 font-mono text-[0.93em] leading-relaxed text-gray-900 dark:bg-gray-950 dark:text-gray-100">
+      <pre className="w-full overflow-x-auto rounded border-0 bg-gray-50 p-4 font-mono text-[calc(0.93em-2px)] leading-relaxed text-gray-900 dark:bg-gray-950 dark:text-gray-100">
         {children}
       </pre>
     ),
-    code({ inline, className, children, ...props }) {
+    code({ className, children, ...props }) {
       const match = /language-(\w+)/.exec(className || "");
-      // Fenced / indented code blocks (not backtick inline)
-      if (!inline && match) {
+      const text = String(children).replace(/\n$/, "");
+      // react-markdown v10 dropped `inline`; fenced blocks contain newlines.
+      const isBlock = Boolean(match) || text.includes("\n");
+
+      if (match) {
         return (
           <SyntaxHighlighter
             language={match[1]}
@@ -140,15 +143,14 @@ function buildComponents(isDark, { sectionHeadings = false } = {}) {
             codeTagProps={{ style: { ...codeFont, fontSize: "inherit", lineHeight: "inherit" } }}
             PreTag="div"
           >
-            {String(children).replace(/\n$/, "")}
+            {text}
           </SyntaxHighlighter>
         );
       }
-      if (!inline) {
-        // Fence with no language tag — still monospace (highlighter only runs when language-* matches)
+      if (isBlock) {
         return (
           <code
-            className="block w-full whitespace-pre font-mono text-[0.93em] leading-relaxed [font-variant-ligatures:none]"
+            className="block w-full whitespace-pre font-mono text-[calc(0.93em-2px)] leading-relaxed [font-variant-ligatures:none]"
             style={codeFont}
             {...props}
           >
@@ -156,13 +158,8 @@ function buildComponents(isDark, { sectionHeadings = false } = {}) {
           </code>
         );
       }
-      // Inline `code` — match body size (column sets responsive text-[18px]…lg:text-[23px])
       return (
-        <code
-          className="rounded bg-gray-50 px-1 font-mono text-inherit leading-[inherit] dark:bg-gray-950"
-          style={codeFont}
-          {...props}
-        >
+        <code className="inline-code" {...props}>
           {children}
         </code>
       );

@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import AnimWrapper from "../Transition";
 import Markdown from "../components/Markdown";
-import { getPost } from "../content/blog/index.js";
+import { formatDate, getPost } from "../content/blog/index.js";
 
 const columnClass =
   "mx-auto w-full min-w-0 max-w-[960px] px-4 font-serif text-[18px] text-gray-900 sm:px-6 sm:text-[19px] md:px-10 md:text-[22px] lg:px-[50px] lg:text-[23px] dark:text-gray-100";
@@ -29,7 +29,10 @@ function BlogPost() {
     <AnimWrapper>
       <article className={columnClass}>
         <header className="mb-8">
-          <h1 className="font-blog-heading text-[calc(1.75rem+2pt-1px)] font-light leading-tight text-gray-900 md:text-[calc(2.25rem+2pt-1px)] dark:text-white">
+          <p className="font-heading text-[15px] font-light text-gray-500 sm:text-[16px] md:text-[17px] dark:text-gray-400">
+            {formatDate(post.date)}
+          </p>
+          <h1 className="mt-2 font-blog-heading text-[calc(1.75rem+2pt-1px)] font-light leading-tight text-gray-900 md:text-[calc(2.25rem+2pt-1px)] dark:text-white">
             {post.title}
           </h1>
           {post.subtitle ? (
@@ -41,19 +44,19 @@ function BlogPost() {
           <Markdown>{post.content}</Markdown>
         </div>
 
-        {post.substack ? (
+        {post.sourceUrl || post.substack ? (
           <>
             <hr className="mt-5 mb-4 border-gray-200 dark:border-slate-800" />
 
             <footer className="font-light italic text-gray-900 dark:text-gray-100">
-              Available on{" "}
+              {post.sourceUrl ? "Originally posted on " : "Available on "}
               <a
-                href={post.substack}
+                href={post.sourceUrl ?? post.substack}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="text-sky-600 transition duration-300 hover:text-sky-800 dark:text-sky-300 dark:hover:text-sky-200"
               >
-                Substack
+                {post.sourceUrl ? post.sourceLabel : "Substack"}
               </a>
               .
             </footer>
