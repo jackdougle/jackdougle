@@ -1,8 +1,8 @@
 ## Hi, I'm Jack!
 
-Among other things, I love biosecurity, video games, and philosophy.
+Among other things, I love biology, philosophy, and video games.
 
-Currently, I'm thinking about where I can help the world most (I'm unemployed). Previously, I've [built software](https://users.rust-lang.org/t/introducing-nucleaze-fast-multi-threaded-k-mer-sequence-filtration/138630) for SecureBio, researched pandemic preparedness at Hadrian Biodefense, improved synthesis screening standards at the Sequence Biosecurity Risk Consortium, and designed nucleic acid diagnostics at Strive Bioscience, a Gates Foundation-backed startup.
+Currently, I'm trying to reduce AI-enabled biosecurity risks at Anthropic. Previously, I've [built software](https://users.rust-lang.org/t/introducing-nucleaze-fast-multi-threaded-k-mer-sequence-filtration/138630) for SecureBio, researched biopreparedness at Hadrian Biodefense, worked sequence screening standards at the Sequence Biosecurity Risk Consortium, and designed nucleic acid diagnostics at a Gates Foundation-backed startup.
 
 ![](/me/side.jpeg)
 
